@@ -21,7 +21,6 @@ import {
 } from "expo-camera";
 
 import { router } from "expo-router";
-import * as FileSystem from "expo-file-system";
 import { File } from "expo-file-system";
 
 import { detectImage } from "src/services/api";
@@ -585,7 +584,6 @@ export default function CameraScreen() {
       setDetectedObjects([]);
     } finally {
       if (capturedUri) {
-        void FileSystem.deleteAsync(capturedUri, { idempotent: true }).catch(() => {});
         try {
           const tempFile = new File(capturedUri);
           tempFile.delete();
