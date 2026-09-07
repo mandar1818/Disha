@@ -2676,7 +2676,6 @@ class DecisionEngine:
                     "Center obstacle blocks forward path; right corridor is clear",
                 )
             elif left_clear and right_clear:
-                if right_risk < left_risk - 0.04:
                 # Anti-oscillation hysteresis: favor existing active turn direction
                 if self.last_action in ("TURN_LEFT", "MOVE_LEFT") and left_risk <= right_risk + 0.08:
                     return (

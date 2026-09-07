@@ -290,25 +290,15 @@ class MiDaSDepthEstimator:
 
         depth = np.squeeze(output)
 
-        # Fast bilinear interpolation up to original frame dimensions
-        depth_resized = cv2.resize(
         # Sanitize non-finite values on compact 256x256 tensor
         depth = np.nan_to_num(
             depth,
-            (target_width, target_height),
-            interpolation=cv2.INTER_LINEAR,
-        )
-
-        depth_resized = np.nan_to_num(
-            depth_resized,
             nan=0.0,
             posinf=1.0,
             neginf=0.0,
             copy=False,
         )
 
-        d_min = float(depth_resized.min())
-        d_max = float(depth_resized.max())
         d_min = float(depth.min())
         d_max = float(depth.max())
         diff = d_max - d_min
@@ -317,10 +307,8 @@ class MiDaSDepthEstimator:
         # Contract: 0.0 = closest, 1.0 = farthest.
         # Normalizing in 256x256 first prevents massive temporary allocations at frame resolution.
         if diff > 1e-8:
-            depth_resized = (d_max - depth_resized) / diff
             depth = (d_max - depth) / diff
         else:
-            depth_resized = np.zeros_like(depth_resized, dtype=np.float32)
             depth = np.zeros_like(depth, dtype=np.float32)
 
         # Fast bilinear interpolation up to frame dimensions

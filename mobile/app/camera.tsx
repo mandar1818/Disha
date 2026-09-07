@@ -281,24 +281,19 @@ function getDirectionText(
   if (navigationResult?.navigation_stage === "TURN" && navigationResult?.turn_angle_deg) {
     const deg = Math.round(navigationResult.turn_angle_deg);
     if (value === "TURN_LEFT" || value === "LEFT") {
-      return `Turn Left (~${deg}°)`;
       return `Turn Left about ${deg || 45} degrees`;
     }
     if (value === "TURN_RIGHT" || value === "RIGHT") {
-      return `Turn Right (~${deg}°)`;
       return `Turn Right about ${deg || 45} degrees`;
     }
   }
 
   if (navigationResult?.navigation_stage === "MOVE") {
     const steps = navigationResult.movement_steps ?? navigationResult.steps ?? 0;
-    if (steps > 0) {
     if (steps >= 2) {
       if (value === "GO_BACK" || navigationResult.movement_action === "WALK_BACK") {
-        return `Move Back (~${steps} steps)`;
         return `Move Back for about ${steps} steps`;
       }
-      return `Move Forward (~${steps} steps)`;
       return `Move Forward for about ${steps} steps`;
     }
   }
@@ -310,7 +305,6 @@ function getDirectionText(
       return "Move Left";
 
     case "TURN_LEFT":
-      return "Turn Left";
       return "Turn Left about 45 degrees";
 
     case "RIGHT":
@@ -319,11 +313,9 @@ function getDirectionText(
       return "Move Right";
 
     case "TURN_RIGHT":
-      return "Turn Right";
       return "Turn Right about 45 degrees";
 
     case "STOP":
-      return "STOP";
       return "Stop";
 
     case "GO_BACK":

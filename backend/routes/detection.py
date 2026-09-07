@@ -138,15 +138,11 @@ def decode_image(
             f"Image decompression failed due to memory constraints: {exc}"
         ) from exc
 
-    if image is None:
     if image is None or image.size == 0:
         raise ValueError(
-            "Unable to decode uploaded image."
+            "Unable to decode uploaded image or image is empty."
         )
 
-    if image.size == 0:
-        raise ValueError(
-            "Decoded image is empty."
     # Memory guard: downscale multi-megapixel frames (> 960px) to prevent
     # downstream OpenCV out-of-memory errors (e.g. Failed to allocate 37748736 bytes)
     h, w = image.shape[:2]
