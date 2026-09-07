@@ -1,0 +1,61 @@
+﻿# Python virtual environments
+venv/
+.venv/
+python_env/
+edge_ai/.venv/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pip cache
+pip_cache/
+
+# Node / Expo / React Native
+node_modules/
+mobile/node_modules/
+.expo/
+mobile/.expo/
+dist/
+build/
+
+# Android build outputs & local config
+.gradle/
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/build/
+local.properties
+mobile/android/local.properties
+*.keystore
+*.jks
+*.iml
+*.hprof
+.cxx/
+*.aar
+*.ap_
+
+# Environment / Secrets
+.env
+.env.*
+*.env
+!.env.example
+!mobile/.env.example
+
+# Logs
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# IDE & OS System files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store

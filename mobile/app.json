@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "SmartVisionAI",
+    "slug": "smartvisionai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "smartvisionai",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.smartvisionai.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "SmartVisionAI uses the camera to detect objects, estimate depth, and provide navigation guidance."
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "recordAudioAndroid": false,
+          "microphonePermission": false
+        }
+      ],
+      "expo-font"
+    ],
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
