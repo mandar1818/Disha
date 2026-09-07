@@ -57,7 +57,7 @@ export default function HomeScreen() {
 
   useEffect(() => {
     AccessibilityInfo.announceForAccessibility(
-      "SmartVisionAI home. Choose Live Guidance, Finder, Settings, or About."
+      "Disha home. Choose Live Guidance, Finder, Settings, or About."
     );
   }, []);
 
@@ -233,7 +233,7 @@ export default function HomeScreen() {
           accessible={true}
           accessibilityRole="button"
           accessibilityLabel="Settings"
-          accessibilityHint="Open SmartVisionAI settings."
+          accessibilityHint="Open Disha settings."
         >
           <View style={styles.navIconBox}>
             <Text style={styles.navIcon}>⚙️</Text>
@@ -258,15 +258,15 @@ export default function HomeScreen() {
           onPress={() => router.push("/about")}
           accessible={true}
           accessibilityRole="button"
-          accessibilityLabel="About SmartVisionAI"
-          accessibilityHint="View information about SmartVisionAI."
+          accessibilityLabel="About Disha"
+          accessibilityHint="View information about Disha."
         >
           <View style={styles.navIconBox}>
             <Text style={styles.navIcon}>ℹ️</Text>
           </View>
 
           <View style={styles.navContent}>
-            <Text style={styles.navTitle}>About SmartVisionAI</Text>
+            <Text style={styles.navTitle}>About Disha</Text>
             <Text style={styles.navDescription}>
               System architecture, model specifications, and project background.
             </Text>
@@ -280,7 +280,7 @@ export default function HomeScreen() {
         {/* ================================================= */}
 
         <Text style={styles.footer} accessible={true}>
-          SmartVisionAI • Assistive Computer Vision
+          Disha • Assistive Computer Vision
         </Text>
       </ScrollView>
     </SafeAreaView>

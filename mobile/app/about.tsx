@@ -73,7 +73,7 @@ export default function AboutScreen() {
 
         <View style={styles.card}>
           <Text style={styles.cardText}>
-            SmartVisionAI is an intelligent computer-vision
+            Disha is an intelligent computer-vision
             assistance system designed to analyze the user's
             surroundings and provide real-time object detection,
             depth estimation, obstacle awareness, navigation
@@ -82,7 +82,7 @@ export default function AboutScreen() {
 
           <Text style={[styles.cardText, styles.paragraph]}>
             The mobile application captures camera frames and
-            communicates with the SmartVisionAI FastAPI backend.
+            communicates with the Disha FastAPI backend.
             The backend processes the frames using YOLOv8 object
             detection, MiDaS depth estimation, and a decision
             engine to determine safety and navigation information.
@@ -218,7 +218,7 @@ export default function AboutScreen() {
           </Text>
 
           <Text style={styles.warningText}>
-            SmartVisionAI is an assistance and research
+            Disha is an assistance and research
             application. Computer-vision predictions can be
             incorrect or delayed. Users should remain aware of
             their surroundings and must not rely exclusively on

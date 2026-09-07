@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "SmartVisionAI",
+    "name": "Disha",
     "slug": "smartvisionai",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,7 +22,7 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSCameraUsageDescription": "SmartVisionAI uses the camera to detect objects, estimate depth, and provide navigation guidance."
+        "NSCameraUsageDescription": "Disha uses the camera to detect objects, estimate depth, and provide navigation guidance."
       }
     },
     "plugins": [

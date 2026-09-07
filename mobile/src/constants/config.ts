@@ -21,7 +21,7 @@ import Constants from "expo-constants";
    APP INFORMATION
    ========================================================= */
 
-export const APP_NAME = "SmartVisionAI";
+export const APP_NAME = "Disha";
 export const APP_VERSION = "1.0.0";
 
 /* =========================================================

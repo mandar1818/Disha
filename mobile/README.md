@@ -1,6 +1,6 @@
-# SmartVisionAI Mobile
+# Disha Mobile
 
-Complete Expo/React Native client for the existing SmartVisionAI FastAPI backend.
+Complete Expo/React Native client for the existing Disha FastAPI backend.
 
 Expected endpoints:
 - GET /health

@@ -546,7 +546,7 @@ export default function Finder() {
         <View
           accessible={true}
           accessibilityRole="alert"
-          accessibilityLabel="Camera Permission Required. SmartVisionAI Finder needs access to your camera to locate objects around you."
+          accessibilityLabel="Camera Permission Required. Disha Finder needs access to your camera to locate objects around you."
           style={styles.permissionCard}
         >
           <View style={styles.iconCircle} importantForAccessibility="no">
@@ -562,7 +562,7 @@ export default function Finder() {
           </Text>
 
           <Text style={styles.description}>
-            SmartVisionAI Finder needs access to
+            Disha Finder needs access to
             your camera to locate objects around
             you.
           </Text>

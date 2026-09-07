@@ -479,7 +479,7 @@ const CameraView = forwardRef<
         </Text>
 
         <Text style={styles.description}>
-          SmartVisionAI needs camera access to
+          Disha needs camera access to
           detect objects, estimate depth and
           provide navigation guidance.
         </Text>
@@ -584,7 +584,7 @@ const CameraView = forwardRef<
       <View style={styles.controls}>
         <View style={styles.resultInfo}>
           <Text style={styles.resultTitle}>
-            SmartVisionAI
+            Disha
           </Text>
 
           <Text style={styles.resultText}>

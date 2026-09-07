@@ -669,7 +669,7 @@ export default function CameraScreen() {
             Camera Access Required
           </Text>
           <Text style={styles.permissionText}>
-            SmartVisionAI requires camera access for real-time assistive guidance.
+            Disha requires camera access for real-time assistive guidance.
           </Text>
           <Pressable
             style={styles.primaryButton}

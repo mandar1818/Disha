@@ -160,7 +160,7 @@ export default function SettingsScreen() {
   useEffect(() => {
     setBackendUrlState(getBackendUrl());
     AccessibilityInfo.announceForAccessibility(
-      "Settings screen. SmartVisionAI accessibility and guidance preferences."
+      "Settings screen. Disha accessibility and guidance preferences."
     );
   }, []);
 
@@ -185,12 +185,12 @@ export default function SettingsScreen() {
       if (result) {
         Alert.alert(
           "Backend Connected",
-          "SmartVisionAI successfully connected to the FastAPI backend."
+          "Disha successfully connected to the FastAPI backend."
         );
       } else {
         Alert.alert(
           "Connection Failed",
-          "The mobile app could not connect to the SmartVisionAI backend.\n\nCheck that:\n• FastAPI is running\n• Your phone and PC are on the same network\n• The backend IP address is correct\n• Port 8000 is allowed"
+          "The mobile app could not connect to the Disha backend.\n\nCheck that:\n• FastAPI is running\n• Your phone and PC are on the same network\n• The backend IP address is correct\n• Port 8000 is allowed"
         );
       }
     } catch {
@@ -334,7 +334,7 @@ export default function SettingsScreen() {
           accessible={true}
           accessibilityRole="button"
           accessibilityLabel="Go back"
-          accessibilityHint="Returns to the SmartVisionAI home screen"
+          accessibilityHint="Returns to the Disha home screen"
           style={styles.backButton}
           onPress={() => router.back()}
         >
@@ -344,13 +344,13 @@ export default function SettingsScreen() {
         <View
           accessible={true}
           accessibilityRole="header"
-          accessibilityLabel="Settings. SmartVisionAI configuration"
+          accessibilityLabel="Settings. Disha configuration"
           style={styles.headerText}
         >
           <Text style={styles.headerTitle}>Settings</Text>
 
           <Text style={styles.headerSubtitle}>
-            SmartVisionAI configuration
+            Disha configuration
           </Text>
         </View>
       </View>
@@ -825,7 +825,7 @@ export default function SettingsScreen() {
         <View
           accessible={true}
           accessibilityRole="alert"
-          accessibilityLabel="Important notice: SmartVisionAI navigation guidance is an assistance system. Always remain aware of your surroundings and do not depend exclusively on the application for personal safety."
+          accessibilityLabel="Important notice: Disha navigation guidance is an assistance system. Always remain aware of your surroundings and do not depend exclusively on the application for personal safety."
           style={styles.warningCard}
         >
           <Text style={styles.warningTitle} importantForAccessibility="no">
@@ -833,7 +833,7 @@ export default function SettingsScreen() {
           </Text>
 
           <Text style={styles.warningText} importantForAccessibility="no">
-            SmartVisionAI navigation guidance is an assistance
+            Disha navigation guidance is an assistance
             system. Always remain aware of your surroundings and
             do not depend exclusively on the application for
             personal safety.
